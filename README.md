@@ -1,2 +1,2 @@
 # restarter
-React starter kit
+React + Redux starter kit

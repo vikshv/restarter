@@ -1,0 +1,31 @@
+{
+    "extends": "stylelint-config-standard",
+    "defaultSeverity": "warning",
+    "rules": {
+        "color-hex-length": null,
+        "color-named": "never",
+        "custom-property-empty-line-before": null,
+        "declaration-block-trailing-semicolon": "always",
+        "declaration-colon-space-before": "never",
+        "declaration-colon-space-after": "always",
+        "declaration-colon-newline-after": null,
+        "declaration-empty-line-before": ["never", {
+          "ignore": [
+            "after-comment",
+            "after-declaration"
+          ]
+        }],
+        "indentation": 4,
+        "no-missing-end-of-source-newline": null,
+        "number-no-trailing-zeros": null,
+        "selector-combinator-space-after": null,
+        "selector-no-qualifying-type": true,
+        "selector-max-id": 0,
+        "selector-pseudo-class-no-unknown": [true, {
+             "ignorePseudoClasses": ["global"]
+        }],
+        "selector-list-comma-newline-after": "always",
+        "shorthand-property-no-redundant-values": null,
+        "string-quotes": "single"
+    }
+}
