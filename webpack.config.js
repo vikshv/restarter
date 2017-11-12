@@ -6,12 +6,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/apps/main/index.js'
+        main: './src/app/index.js'
     },
 
     output: {
@@ -26,7 +24,7 @@ module.exports = {
         ],
         alias: {
             'core': 'src/core',
-            'main': 'src/apps/main'
+            'app': 'src/app'
         }
     },
 
@@ -46,7 +44,7 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale/, /(en-gb|ru)\.js/),
         new HtmlWebPackPlugin({
-            template: './src/apps/main/index.html',
+            template: './src/app/index.html',
             alwaysWriteToDisk: true
         })
     ],

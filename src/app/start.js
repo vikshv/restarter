@@ -4,9 +4,9 @@ import renderAppService from 'core/services/renderAppService';
 
 import AppContainer from './containers/AppContainer';
 import configureStore from './store/configureStore';
-import 'core/styles/commons';
+import 'core/styles';
 
-export default function start(options = {}) {
+export default function start() {
     const store = configureStore();
     renderApp(store);
 
