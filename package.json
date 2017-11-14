@@ -32,6 +32,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-mocha": "^1.2.0",
     "karma-mocha-reporter": "^2.2.5",
+    "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^2.0.5",
     "mocha": "^4.0.1",
     "path": "^0.12.7",
@@ -62,8 +63,9 @@
     "static:eslint": "eslint ./src/**/*.js",
     "static:eslint:fix": "eslint ./src/**/*.js --fix",
     "static:stylelint": "stylelint ./src/**/*.css ./src/**/*.mcss",
-    "test": "node_modules/.bin/karma start --single-run --no-auto-watch",
-    "test:watch": "node_modules/.bin/karma start --auto-watch --no-single-run"
+    "test": "node_modules/.bin/karma start karma.conf.ci.js",
+    "test:watch": "node_modules/.bin/karma start --auto-watch --no-single-run",
+    "test:single": "node_modules/.bin/karma start --single-run --no-auto-watch"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
